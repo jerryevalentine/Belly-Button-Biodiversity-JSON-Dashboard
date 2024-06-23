@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="app.js"></script> <!-- JavaScript file import -->
+    <title>Bellybutton Biodiversity</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+          crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 p-5 text-center bg-light">
+                <h1>Belly Button Biodiversity Dashboard</h1>
+                <p>Use the interactive charts below to explore the dataset.</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card card-body bg-light">
+                    <h6>Test Subject ID Number:</h6>
+                    <select id="selDataset" onchange="optionChanged(this.value)"></select> <!-- Dropdown -->
+                </div>
+                
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h4 class="card-title">Demographic Info</h4>
+                    </div>
+                    <div id="sample-metadata" class="card-body"></div> <!-- Metadata panel -->
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div id="bar"></div> <!-- Bar chart container -->
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div id="bubble"></div> <!-- Bubble chart container -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Import D3, Plotly, and your JavaScript file -->
+
+
+    <!-- Initialize the dashboard on page load -->
+    <!-- Load the JavaScript file that contains your functions -->
+
+    <!-- Inline script to call 'init()' after all scripts are loaded -->
+    <script>
+        init(); // Call the init function to set up the page
+    </script>
+
+
+</body>
+</html>
